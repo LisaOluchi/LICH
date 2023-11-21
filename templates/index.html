@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css') }}">
+    <script src="path/to/your/script.js"></script>
+    <title>LICH</title>
+   
+</head>
+
+<body>
+    <header>
+        <h1>      LICH  Let's Improve CHIC Happenings </h1>
+    </header>
+    <main>
+        <section id="authentication">
+            <h2>User Authentication</h2>
+            <form id="auth-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit"> Sign In</button>
+                <p> Don't Have an account? <a href="#"> Sign Up</a></p>
+            </form>  
+        </section>
+
+        <section id="user-profile">
+            <h2>User Profile</h2>
+            <form id="profile-form">
+
+                <label for="style-preference">Style Preference</label>
+                <input type="text" id="style-preference" name="style_preference">
+
+                <label for="favorite-aesthetic">Favorite Aesthetic</label>
+                <input type="text" id="favorite-aesthetic" name="favorite_aesthetic">
+
+                <label for="go-to brand">Go-to Brand:</label>
+                <input type="text" id="go-to brand" name="go_to brand">
+
+                <button type="submit">Save Profile</button>
+            </form>
+        </section>
+
+        <section id="outfit-generator">
+            <h2> Welcome To Your Outfit-Generator</h2>
+            <button id="generate-outfit">Generate Outfit</button>
+            <div id="outfit-display"></div>
+        </section>
+
+        <section id="random-outfit">
+            <h2> Randoms</h2>
+            <button id="random-outfit-button">Generate a Random Outfit</button>
+            <div id="random-outfit-display"></div>
+        </section>
+
+
+    </main>
+    <script src="{{url_for('static', filename='script.js') }}"></script>
+    <script src="{{url_for('static', filename='script.js') }}"></script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
