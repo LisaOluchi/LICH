@@ -9,7 +9,7 @@ header{
     background-image: url('path/to/your/background-image.jpg');
     background-size:cover;
     background-position: center;
-    height:70vh;
+    height:100vh;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@ header{
 header h1{
     font-family:'FF Fontesque', sans-serif;
     font: size 3em;
-    color:#fff;
+    color:beige;
 }
 
 main{
