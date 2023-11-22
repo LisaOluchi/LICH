@@ -6,7 +6,7 @@ body {
 }
 
 header{
-    background-image: url('path/to/your/background-image.jpg');
+    background-image:url('LICH/static/images/background.jpg');
     background-size:cover;
     background-position: center;
     height:100vh;
@@ -20,7 +20,7 @@ header{
 header h1{
     font-family:'FF Fontesque', sans-serif;
     font: size 3em;
-    color:beige;
+    color:black;
 }
 
 main{
