@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css') }}">
+    <title>History of LICH</title>
+</head>
+
+<body>
+    <header>
+        <h1>LICH - History</h1>
+    </header>
+    <nav>
+        <a href="{{url_for('index')}}">Home</a>
+        <a href="{{url_for('about')}}">About</a>
+        <a href="{{url_for('history')}}">History</a>
+    </nav>
+    <main>
+        <div id="image-container">
+            <img id="page-image" src="{{url_for('static', filename='images/url_to_history_image.jpg')}}" alt="History Page Image">
+        </div>
+        <section id="history-content">
+            <h2>History of LICH</h2>
+            <p>LICH has a rich history, blending the charm of Pinterest and the sophistication of "Sex and the City." Born from a mission to democratize fashion, it's more than just a digital makeover platform; it's a movement. LICH empowers users to effortlessly redefine their style narratives, sparking creative confidence and embracing simplicity. In a world where fashion is often elusive, LICH envisions a future where it becomes a universal tool for self-discovery, your very own personal Pinterest but more effective.</p>
+        </section>
+    </main>
+    <script src="{{url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

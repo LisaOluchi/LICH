@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css') }}">
+    <title>About LICH</title>
+</head>
+
+<body>
+    <header>
+        <h1>LICH - About Us</h1>
+    </header>
+    <nav>
+        <a href="{{url_for('index')}}">Home</a>
+        <a href="{{url_for('about')}}">About</a>
+        <a href="{{url_for('history')}}">History</a>
+    </nav>
+    <main>
+        <div id="image-container">
+            <img id="page-image" src="{{url_for('static', filename='images/url_to_about_image.jpg')}}" alt="About Page Image">
+        </div>
+        <section id="about-content">
+            <h2>About LICH</h2>
+            <p>LICH, the digital makeover platform, seamlessly merges "Clueless" inspiration with modern style evolution. Currently, it empowers users to effortlessly redefine their fashion narratives, fostering creativity and confidence. LICH envisions a present where fashion is a universal tool for self-discovery and personal expression.</p>
+        </section>
+    </main>
+    <script src="{{url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
