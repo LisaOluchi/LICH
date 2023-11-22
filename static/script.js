@@ -29,11 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
             outfit[category] = randomItem;
         });
 
-        displayOutfit(outfit,randomOutfitDisplay);
+        displayOutfit(outfit, randomOutfitDisplay);
         showFeedbackMessage('Random outfit generated successfully!');
-
     }
-
 
     function showFeedbackMessage(message) {
         const feedbackMessageElement = document.getElementById('feedback-message');
@@ -42,32 +40,41 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             feedbackMessageElement.innerHTML = '';
         }, 3000);
-
     }
-        
-
-
 
     function displayOutfit(outfit, displayElement) {
         let outfitHTML = '<strong>Your Random Outfit:</strong><br>';
         for (const category in outfit) {
-            outfitHTML += `<p><em>${category}:</em> ${outfit[category]}</p>`;
+            const item = outfit[category];
+            outfitHTML += `<p><em>${category}:</em> ${item.name}</p>`;
+            outfitHTML += `<img src="${item.imageUrl}" alt="${item.name}">`;
         }
         displayElement.innerHTML = outfitHTML;
     }
 
     function getRandomItem(category) {
         const items = {
-            'Tops': ['T-shirt', 'Blouse', 'Sweater'],
-            'Bottoms': ['Jeans', 'skirt', 'Shorts'],
-            'Shoes': ['Sneakers', 'Heels', 'Slides'],
+            'Tops': [
+                { name: 'T-shirt', imageUrl: '/static/images/tshirt1 (2).jpeg' },
+                { name: 'Blouse', imageUrl: '/static/images/tshirt2 (2).jpeg' },
+                { name: 'Sweater', imageUrl: '/static/images/tshirt3.jpeg' }
+            ],
+            'Bottoms': [
+                { name: 'Jeans', imageUrl: '/static/images/pants1.jpeg' },
+                { name: 'Skirt', imageUrl: '/static/images/pants2.jpeg' },
+                { name: 'Shorts', imageUrl: '/static/images/pants3.jpeg' }
+            ],
+            'Shoes': [
+                { name: 'Sneakers', imageUrl: '/static/images/shoes1.jpeg' },
+                { name: 'Heels', imageUrl: '/static/images/shoes2.jpeg' },
+                { name: 'Slides', imageUrl: '/static/images/shoes3.jpeg' }
+            ],
         };
+
         const randomIndex = Math.floor(Math.random() * items[category].length);
         return items[category][randomIndex];
     }
-});
 
-document.addEventListener('DOMContentLoaded', function () {
     const homeLink = document.getElementById('home-link');
     const aboutLink = document.getElementById('about-link');
     const historyLink = document.getElementById('history-link');
@@ -80,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showHomePage() {
         clearFeedbackMessage();
-        showPageImage('url_to_about_image.jpg');
+        showPageImage('/static/images/about.jpeg');
 
         const aboutContent = `
             <h2>About LICH</h2>
@@ -89,9 +96,22 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('main').innerHTML = aboutContent;
     }
 
+    function showAboutPage() {
+        clearFeedbackMessage();
+        // Assuming there's a different image for the About page
+        showPageImage('/static/images/about.jpeg');
+
+        // Add the content for the About page here
+        const aboutContent = `
+            <h2>About LICH</h2>
+            <p>Your customized content for the About page goes here.</p>
+        `;
+        document.getElementById('main').innerHTML = aboutContent;
+    }
+
     function showHistoryPage() {
         clearFeedbackMessage();
-        showPageImage('url_to_history_image.jpg');
+        showPageImage('/static/images/history.jpeg');
 
         const historyContent = `
             <h2>History of LICH</h2>
