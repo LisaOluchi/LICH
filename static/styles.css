@@ -11,11 +11,28 @@ header{
     background-position: center;
     height:100vh;
     display:flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    color: darkgreen; 
     text-align: center;
-
 }
+
+
+nav{
+    background-color:beige ;
+    padding-left: 10px;
+}
+
+nav a {
+    color: darkseagreen;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
 
 header h1{
     font-family:'FF Fontesque', sans-serif;
