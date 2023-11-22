@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         displayOutfit(outfit, outfitDisplay);
+        showFeedbackMessage('Outfit generated successfully!');
     }
 
     function generateRandomOutfit() {
@@ -28,8 +29,24 @@ document.addEventListener('DOMContentLoaded', function () {
             outfit[category] = randomItem;
         });
 
-        displayOutfit(outfit, randomOutfitDisplay);
+        displayOutfit(outfit,randomOutfitDisplay);
+        showFeedbackMessage('Random outfit generated successfully!');
+
     }
+
+
+    function showFeedbackMessage(message) {
+        const feedbackMessageElement = document.getElementById('feedback-message');
+        feedbackMessageElement.innerHTML = message;
+
+        setTimeout(() => {
+            feedbackMessageElement.innerHTML = '';
+        }, 3000);
+
+    }
+        
+
+
 
     function displayOutfit(outfit, displayElement) {
         let outfitHTML = '<strong>Your Random Outfit:</strong><br>';
