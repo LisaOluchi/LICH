@@ -72,9 +72,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const aboutLink = document.getElementById('about-link');
     const historyLink = document.getElementById('history-link');
 
-    homeLink.addEventListener('click', showHomePage);
-    aboutLink.addEventListener('click', showAboutPage);
-    historyLink.addEventListener('click', showHistoryPage);
+    homeLink.addEventListener("click", showHomePage);
+    aboutLink.addEventListener("click", showAboutPage);
+    historyLink.addEventListener("click", showHistoryPage);
 
     showHomePage();
 
