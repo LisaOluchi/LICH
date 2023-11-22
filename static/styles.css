@@ -6,7 +6,7 @@ body {
 }
 
 header{
-    background-image:url('LICH/static/images/background.jpg');
+    background-image: url('images/background.jpg');
     background-size:cover;
     background-position: center;
     height:100vh;
