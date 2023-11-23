@@ -55,9 +55,9 @@ document.addEventListener('DOMContentLoaded', function () {
     function getRandomItem(category) {
         const items = {
             'Tops': [
-                { name: 'T-shirt', imageUrl: '/static/images/tshirt1 (2).jpeg' },
-                { name: 'Blouse', imageUrl: '/static/images/tshirt2 (2).jpeg' },
-                { name: 'Sweater', imageUrl: '/static/images/tshirt3.jpeg' }
+                { name: 'T-shirt', imageUrl:'/static/images/tshirt1 (2).jpeg' },
+                { name: 'Blouse', imageUrl:'/static/images/tshirt2 (2).jpeg' },
+                { name: 'Sweater', imageUrl:'/static/images/tshirt3.jpeg' }
             ],
             'Bottoms': [
                 { name: 'Jeans', imageUrl: '/static/images/pants1.jpeg' },
